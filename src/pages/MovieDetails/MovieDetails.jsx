@@ -20,11 +20,12 @@ const MovieDetails = () => {
 			.then(response => setMovie(response))
 			.catch(err => console.error(err));
 	}, [movieId])
+	
+	const backLinkHref = location.state?.from ?? "/";
+
 	return (
 		<>
-			{location.pathname !== '/' && (
-				<Btn onClick={() => navigate(-1)}>Go Back</Btn>
-			)}
+			<Btn type="button" onClick={() => navigate(backLinkHref)}> Go back </Btn>
 			<MovieWrap>
 				<img
 					src={`https://image.tmdb.org/t/p/w200/${movie?.poster_path}`}

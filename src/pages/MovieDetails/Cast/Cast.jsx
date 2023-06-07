@@ -21,7 +21,7 @@ const Cast = () => {
     
     return (
         <ul>
-            {cast &&
+            {cast.length > 0 &&
                 cast.map(actor => (
                     <li key={actor.id}>
                         <img

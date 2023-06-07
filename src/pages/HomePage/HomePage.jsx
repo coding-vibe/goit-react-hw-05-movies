@@ -24,7 +24,8 @@ const HomePage = () => {
             {
                 movies.map(movie => (
                     <li key={movie.id}>
-                        <NavLink to={`/movies/${movie.id.toString()}`} state={{ from: location }}>{movie.original_title}
+                        <NavLink to={`/movies/${movie.id.toString()}`}
+                            state={{ from: location }}>{movie.original_title}
                         </NavLink>
                     </li>
                 ))}
